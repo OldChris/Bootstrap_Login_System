@@ -27,7 +27,7 @@ An example website can be found at https://pollux.pa7rhm.nl
 For more information see [User Manual](docs/Bootstrap_Logon_System.pdf)
 
 [Bootstrap CSS and JS files can be downloaded from](https://getbootstrap.com/docs/5.0/getting-started/download/)
-# Docker files
+### Docker files
 Included are Docker files that I used for this project  
 3 containers are used : 
 - apache-php
