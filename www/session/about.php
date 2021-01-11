@@ -29,11 +29,11 @@ function displayAbout()
     	echo '<br>Bootstrap is loaded from CDN<br>' . PHP_EOL;
     }
     // https://docs.github.com/en/rest/reference/repos#get-the-latest-release
-    $giturl ='https://github.com/OldChris/Bootstrap_Login_System ';
+    $giturl ='https://github.com/OldChris/Bootstrap_Login_System';
     $gitapiurl ='https://api.github.com/repos/OldChris/Bootstrap_Login_System';
     $giturlVersion = $gitapiurl . '/releases';
     $headers=get_headers($giturlVersion);
-    //echo 'headers[0] = ' . $headers[0] . PHP_EOL;
+    
 
     $options  = array('http' => array('user_agent'=> $_SERVER['HTTP_USER_AGENT']));
     $context  = stream_context_create($options);
@@ -51,11 +51,11 @@ function displayAbout()
     
     if ($tag != $appVersion )
     {
-	    echo formatUserMessage('This version : ' . $appVersion . ', Version on GitHub : ' . $tag , "W");
+	    echo formatUserMessage('This version : ' . $appVersion . ', Version on GitHub : ' . $tag , "A");
     }
     else
     {
-	    echo formatUserMessage('This version : ' . $appVersion . ', Version on GitHub : ' . $tag , "I");
+	    echo formatUserMessage('This version : ' . $appVersion . ', Version on GitHub : ' . $tag , "G");
     }
   
   echo '<br><a href="' . $giturl . '" target="_blank">View / download source from Github</a> <br><br>' .PHP_EOL; 
