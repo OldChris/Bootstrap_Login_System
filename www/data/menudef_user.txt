@@ -1,0 +1,10 @@
+// ignore this comment line
+Fruit of the day =  fruitoftheday
+Show Fruit  =show_fruit
+    show all=show_all_fruit
+Apples=apples
+    show apples=show_apples
+    show 40 apples  =show_40_apples
+12345678
+      Mistake
+# comment 

@@ -1,0 +1,56 @@
+version: "3.2"
+services:
+  php:
+    build: 
+      context: ./apache-php
+      dockerfile: Dockerfile
+    image: php:apache-ssl
+    networks:
+      - frontend
+      - backend
+    environment:
+      - MYSQL_LOGIN_HOST=app-mysql
+      - MYSQL_LOGIN_USER=login_user
+      - MYSQL_LOGIN_PASSWORD=login_pass
+      - MYSQL_LOGIN_DB=userform
+      - MYSQL_APP_HOST=app-mysql
+      - MYSQL_APP_USER=app_user
+      - MYSQL_APP_PASSWORD=app-password
+      - MYSQL_APP_DB=app_db
+     
+
+    volumes:
+      - ./www/:/var/www/html/
+    ports:
+      - "50001:80"
+      - "50003:443"
+    container_name: app-php
+  mysql:
+    image: mysql:5.7
+    networks:
+      - backend
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_USER=login_user
+      - MYSQL_PASSWORD=login_pass
+      - MYSQL_DATABASE=userform
+    volumes:
+      - ./mysql/db_init_script:/docker-entrypoint-initdb.d 
+    container_name: app-mysql
+  phpmyadmin:
+    image: phpmyadmin:latest
+    depends_on:
+      - mysql
+    networks:
+      - backend
+    ports:
+      - "50002:80"
+    environment:
+      - PMA_HOST=app-mysql
+      - PMA_PORT= 3306
+    volumes:
+      - /sessions
+    container_name: app-phpmyadmin
+networks:
+  frontend:
+  backend:

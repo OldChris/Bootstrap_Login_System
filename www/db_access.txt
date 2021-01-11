@@ -1,0 +1,10 @@
+#
+	SessionDbHost=app-mysql
+	SessionDbName=userform 
+	SessionDbUsername=login_user
+	SessionDbPassword=login_pass
+//  
+	AppDbHost=app-mysql
+	AppDbName=app_db
+	AppDbUsername=app_user
+	AppDbPassword=app-password
