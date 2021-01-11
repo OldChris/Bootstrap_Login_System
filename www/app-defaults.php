@@ -5,14 +5,14 @@ if ($site == "prod")
 	$App_Name="YourNewWebsite";
 	$App_SiteURL="https://mynewwebsite.com";
 	$App_SessionName="sessiononmynewwebsite";
-	$App_version="v1.0";
+	$App_version="v1.2";
 	$App_Copyright="(c) 2011-" . date('Y') . "Chris van Gorp";
 } else
 {
 	$App_Name="YourNewWebsite-DEV";
 	$App_SiteURL="https://dev.mynewwebsite.com";
 	$App_SessionName="sessiononmynewwebsiteDev";
-	$App_Version="v1.0";
+	$App_Version="v1.2";
 	$App_Copyright="(c) 2011-" . date('Y') . "Chris Van Gorp";
 }
 $my_folder = dirname( realpath( __FILE__ ) ) . DIRECTORY_SEPARATOR;
