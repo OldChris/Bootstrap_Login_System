@@ -1,10 +1,10 @@
 # Bootstrap_Login_System
 
 ## What is Bootstrap_Login_System?
-A website build using PHP and Bootstrap 5 that allows users to signup and login.
-This project is based on the example provided by CodingNepal
-[CodingNepal on Youtube] (https://youtu.be/IpznmyXApms)
-[CodingNepal website with source]( https://www.codingnepalweb.com/2020/09/login-signup-form-with-email-verification-php-mysql-bootstrap.html)
+A website build using PHP and Bootstrap 5 that allows users to signup and login.  
+This project is based on the example provided by CodingNepal  
+[CodingNepal on Youtube](https://youtu.be/IpznmyXApms)  
+[CodingNepal website with source]( https://www.codingnepalweb.com/2020/09/login-signup-form-with-email-verification-php-mysql-bootstrap.html)  
 
 As you can see I made some corrections and added some extra features.
 
