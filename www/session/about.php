@@ -29,8 +29,8 @@ function displayAbout()
     	echo '<br>Bootstrap is loaded from CDN<br>' . PHP_EOL;
     }
     // https://docs.github.com/en/rest/reference/repos#get-the-latest-release
-    $giturl ='https://github.com/OldChris/webbuilder';
-    $gitapiurl ='https://api.github.com/repos/OldChris/webbuilder';
+    $giturl ='https://github.com/OldChris/Bootstrap_Login_System ';
+    $gitapiurl ='https://api.github.com/repos/OldChris/Bootstrap_Login_System';
     $giturlVersion = $gitapiurl . '/releases';
     $headers=get_headers($giturlVersion);
     //echo 'headers[0] = ' . $headers[0] . PHP_EOL;
@@ -48,7 +48,7 @@ function displayAbout()
     	$tag = $user_data['0']['tag_name'];
     }
     $appVersion=$GLOBALS['App_version'];
-    /*
+    
     if ($tag != $appVersion )
     {
 	    echo formatUserMessage('This version : ' . $appVersion . ', Version on GitHub : ' . $tag , "W");
@@ -57,10 +57,9 @@ function displayAbout()
     {
 	    echo formatUserMessage('This version : ' . $appVersion . ', Version on GitHub : ' . $tag , "I");
     }
-  */
-  //echo '<br><a href="' . $giturl . '" target="_blank">View / download source from Github</a> <br><br>' .PHP_EOL; 
-	//echo '<br><a href="index.php?check=1">Check files and references to images and websites</a><br>' . PHP_EOL;
-	
+  
+  echo '<br><a href="' . $giturl . '" target="_blank">View / download source from Github</a> <br><br>' .PHP_EOL; 
+		
 }
 
 ?>
